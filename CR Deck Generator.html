@@ -1,0 +1,26 @@
+<script>
+"use strict";
+var noOfCards = 93;
+const cards = ['Arrows', "Minions", "Archers", "Knight", "Fireball", "Mini P.E.K.K.A.", "Musketeer", "Giant", "Wall Breakers", "Prince", "Baby Dragon", "Skeleton Army", "Spear Goblins", "Goblins", "Goblin Hut", "Hog Rider", "Goblin Barrel", "Hunter", "Bomber", "Skeletons", "Tombstone", "Valkyrie", "Giant Skeleton", "Witch", "Cannon", "Barbarians", "Barbarian Hut", "Battle Ram", "Barbarian Barrel", "Golem", "Zap", "Minion Horde", "Inferno Tower", "Mega Minion", "Lightning", "P.E.K.K.A.", "Miner", "Lava Hound", "Bats", "Fire Spirits", "Furnace", "Wizard", "Tornado", "Poison", "Magic Archer", "Night Witch", "Mortar", "Skeleton Barrel", "Rocket", "Flying Machine", "X-Bow", "Balloon", "The Log", "Inferno Dragon", "Royal Recruits", "Royal Giant", "Heal", "Three Musketeers", "Dark Prince", "Guards", "Mega Knight", "Princess", "Giant Snowball", "Ice Spirit", "Elixir Collector", "Ice Golem", "Freeze", "Bowler", "Lumberjack", "Ice Wizard", "Rascals", "Goblin Gang", "Earthquake", "Dart Goblin", "Goblin Giant", "Bandit", "Elite Barbarians", "Bomb Tower", "Royal Hogs", "Rage", "Cannon Cart", "Ram Rider", "Tesla", "Zappies", "Clone", "Electro Dragon", "Electro Wizard", "Sparky", "Goblin Cage", "Mirror", "Executioner", "Graveyard", "Royal Ghost"];
+var isTaken = [];
+for (var i = 0; i < noOfCards; i++)
+{
+	isTaken.push(false);
+}
+var eight = 8, y = "\n";
+document.write("---");
+while (eight--)
+{
+	let number = Math.floor(noOfCards*Math.random());
+	if(isTaken[number])
+	{
+		eight++;
+	}
+	else
+	{
+		isTaken[number] = true;
+		var x = cards[number];
+		document.write(x + "---");
+	}
+}
+</script>
